@@ -1,0 +1,142 @@
+﻿@page
+@model IndividualProject.Pages.StoreModel
+@{
+}
+@using Microsoft.AspNetCore.Http
+
+@HttpContext.Session.GetString("username");
+
+
+
+<nav class="product-filter">
+    <h1 id="storetitle">All products</h1>
+
+    <div class="sort">
+        <div class="collection-sort">
+            <label>Filter by:</label>
+            <select>
+                <option value="/">All Products</option>
+                <option value="/">for women</option>
+                <option value="/">for men</option>
+            </select>
+        </div>
+
+        <div class="collection-sort">
+            <label>Sort by:</label>
+            <select>
+                <option value="/">Featured</option>
+                <option value="/">Best Selling</option>
+                <option value="/">Alphabetically, A-Z</option>
+                <option value="/">Alphabetically, Z-A</option>
+                <option value="/">Price, low to high</option>
+                <option value="/">Price, high to low</option>
+                <option value="/">Date, new to old</option>
+                <option value="/">Date, old to new</option>
+            </select>
+        </div>
+    </div>
+</nav>
+<div>
+  <h1>Welcome! You're logged in with the adress @User.Identity.Name</h1>
+</div>
+<section class="products">
+    <div class="product-card">
+        <div class="product-image">
+            <img src="pics/b1product1.jpg">
+        </div>
+        <div class="product-info">
+            <h5>Silk scarf</h5>
+            <h6>$15.00</h6>
+            <input type="submit" value="Add to cart" asp-page-handler="AddToCart1" id="1" />
+        </div>
+    </div>
+
+    <div class="product-card">
+            <div class="product-image">
+                <img src="pics/b2product1.jpeg">
+            </div>
+            <div class="product-info">
+                <h5>Stone cup holders</h5>
+                <h6>$6.00</h6>
+                <input type="submit" value="Add to cart" asp-page-handler="AddToCart2" id="2"/>
+            </div>
+        </>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="pics/b3product1.jpeg">
+        </div>
+        <div class="product-info">
+            <h5>Statue flower vase</h5>
+            <h6>$25.00</h6>
+            <input type="submit" value="Add to cart" asp-page-handler="AddToCart3" id="3"/>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="pics/b1product2.jpg">
+        </div>
+        <div class="product-info">
+            <h5>Traditional romanian pattern puzzle</h5>
+            <h6>$17.00</h6>
+            <input type="submit" value="Add to cart" asp-page-handler="AddToCart4" id="4"/>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="pics/b2product2.jpeg">
+        </div>
+        <div class="product-info">
+            <h5>Stone clock</h5>
+            <h6>$50.00</h6>
+            <input type="submit" value="Add to cart" asp-page-handler="AddToCart5" id="5"/>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="pics/b3product2.jpeg">
+        </div>
+        <div class="product-info">
+            <h5>Green statue vase</h5>
+            <h6>$27.00</h6>
+            <input type="submit" value="Add to cart" asp-page-handler="AddToCart6" id="6"/>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="pics/b1product3.jpg">
+        </div>
+        <div class="product-info">
+            <h5>Drawing book with illustrations</h5>
+            <h6>$45.00</h6>
+            <input type="submit" value="Add to cart" asp-page-handler="AddToCart7" id="7"/>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="pics/b2product3.jpeg">
+        </div>
+        <div class="product-info">
+            <h5>Green and gold tea set</h5>
+            <h6>$99.99</h6>
+            <input type="submit" value="Add to cart" asp-page-handler="AddToCart8" id="8"/>
+        </div>
+    </div>
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="pics/b3product3.jpeg">
+        </div>
+        <div class="product-info">
+            <h5>Golden Vase</h5>
+            <h6>$25.00</h6>
+            <input type="submit" value="Add to cart" asp-page-handler="AddToCart9" id="9"/>
+        </div>
+    </div>
+</section>

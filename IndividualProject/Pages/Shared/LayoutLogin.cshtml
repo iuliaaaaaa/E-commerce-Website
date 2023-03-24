@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/login.css" />
+
+    <title>@ViewData["Title"] - IndividualProject</title>
+
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a asp-area="" asp-page="/Index">IndividualProject</a></li>
+            <li><a asp-area="" asp-page="/Store">Store</a></li>
+            <li><a class="inactive"><b>About us</b></a></li>
+            <li><a class="inactive"><b>Our sellers</b></a></li>
+        </ul>
+
+    </header>
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+
+   
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <!--<script src="~/js/site.js" asp-append-version="true"></script> -->
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
